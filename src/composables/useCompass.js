@@ -1,6 +1,6 @@
 export function useCompass() {
   // Resolve SDK mỗi lần gọi, tránh giữ tham chiếu cũ
-  const getSDK = () => (window.posthog || window.compass) || null;
+  const getSDK = () => (window.leanbase || window.compass) || null;
 
   function capture(event, props = {}) {
     const sdk = getSDK();
